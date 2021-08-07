@@ -1,6 +1,282 @@
-const border = {'border': '1px solid red'}
-const block = {'display': 'block'}
+const border = { 'border': '1px solid red' }
+const block = { 'display': 'block' }
 const click = 'Ты кликнул на кнопку'
+const el = '<li>Дополнительный элемент</li>'
+
+/* Делаем собственный слайдер на jQuery */
+// $( function() {
+//   let slideNow = 1;
+//   let slideCount = $( '.sliderwrapper' ).children().length;
+//   // console.log(slideCount)
+//   let slideTime =2000;
+//
+//   // setInterval(nextSlide, slideTime);
+//
+//   function nextSlide() {
+//     if( slideNow == slideCount || slideNow <= 0 || slideNow > slideCount ) {
+//       $( '.sliderwrapper' ).css( {
+//         "transform": "translate(0,0)",
+//         "-o-transform": "translate(0,0)",
+//         "-webkit-transform": "translate(0,0)",
+//       } )
+//       slideNow = 1;
+//     } else {
+//       let transleteWidth = -$( '.viewport' ).width() * ( slideNow );
+//       $( '.sliderwrapper' ).css( {
+//         "transform": "translate(" + transleteWidth + "px,0)",
+//         "-o-transform": "translate(" + transleteWidth + "px,0)",
+//         "-webkit-transform": "translate(" + transleteWidth + "px,0)",
+//       } )
+//       slideNow++;
+//     }
+//   }
+// } )
+$(function() {
+  let slideNow = 1;
+  let slideCount = $('.sliderwprapper').children().length;
+  let slideTime = 5000;
+  let navBtn = $('.slide-nav');
+  let slide = 0;
+
+  navBtn.click(function() {
+    navBtn = $(this).index();
+    $('.active').removeClass('active');
+    $(this).toggleClass('active');
+    if (navBtn != slide) {
+      $(`.slide`).addClass('slide-none');
+      $(`.slide:eq(${navBtn})`).removeClass('slide-none');
+      slide=navBtn;
+      // slideNow++;
+      // var translateWidth = -$('.viewport').width()	* (navBtn);
+      // $('.sliderwprapper').css({
+      //   'transform': 'translate('+translateWidth+'px,0)',
+      //   '-o-transform': 'translate('+translateWidth+'px,0)',
+      //   '-webkit-transform': 'translate('+translateWidth+'px,0)'
+      // });
+      slideNow = navBtn + 1;
+    }
+  });
+
+  // setInterval(nextSlide, slideTime);
+
+  $('.btn-next').click(nextSlide);
+  $('.btn-prev').click(prevSlide);
+
+
+
+  function nextSlide() {
+    if (slideNow == slideCount || slideNow <=0 || slideNow > slideCount) {
+      // $('.sliderwprapper').css({
+      //   'transform': 'translate(0,0)',
+      //   '-o-transform': 'translate(0,0)',
+      //   '-webkit-transform': 'translate(0,0)'
+      // });
+      $(`.slide`).addClass('slide-none');
+      slide=0;
+      navBtn = slide;
+      $('.active').removeClass('active');
+      $(`.slide-nav:eq(${slide})`).toggleClass('active');
+      $(`.slide:eq(${slide})`).removeClass('slide-none');
+      slideNow = 1;
+    } else {
+      // var translateWidth = -$('.viewport').width()	* (slideNow);
+      // $('.sliderwprapper').css({
+      //   'transform': 'translate('+translateWidth+'px,0)',
+      //   '-o-transform': 'translate('+translateWidth+'px,0)',
+      //   '-webkit-transform': 'translate('+translateWidth+'px,0)'
+      // });
+      $(`.slide:eq(${slide})`).addClass('slide-none');
+      $(`.slide:eq(${slide+1})`).removeClass('slide-none');
+      slide++;
+      navBtn = slide;
+      $('.active').removeClass('active');
+      $(`.slide-nav:eq(${slide})`).toggleClass('active');
+      slideNow++;
+    }
+  }
+  function prevSlide() {
+    if (slide==0 || slideNow == 1 || slideNow <=0 || slideNow > slideCount) {
+      // var translateWidth = -$('.viewport').width() * (slideCount - 1);
+      // $('.sliderwprapper').css({
+      //   'transform': 'translate('+translateWidth+'px,0)',
+      //   '-o-transform': 'translate('+translateWidth+'px,0)',
+      //   '-webkit-transform': 'translate('+translateWidth+'px,0)'
+      // });
+      $(`.slide`).addClass('slide-none');
+      slide=slideCount-1;
+      navBtn = slide;
+      $('.active').removeClass('active');
+      $(`.slide-nav:eq(${slide})`).toggleClass('active');
+      $(`.slide:eq(${slide})`).removeClass('slide-none');
+      slideNow = slideCount;
+    } else {
+      // var translateWidth = -$('.viewport').width()	* (slideNow - 2);
+      // $('.sliderwprapper').css({
+      //   'transform': 'translate('+translateWidth+'px,0)',
+      //   '-o-transform': 'translate('+translateWidth+'px,0)',
+      //   '-webkit-transform': 'translate('+translateWidth+'px,0)'
+      // });
+      
+      $(`.slide:eq(${slide})`).addClass('slide-none');
+      slide--;
+      navBtn = slide;
+      $('.active').removeClass('active');
+      $(`.slide-nav:eq(${slide})`).toggleClass('active');
+      $(`.slide:eq(${slide})`).removeClass('slide-none');
+      slideNow--;
+    }
+  }
+});
+
+/* Табы */
+// $(function(){
+//   let tab = $('a[data-toggle="tab"]');
+//   tab.on('click', function(){
+//     event.preventDefault();
+//     $('.active').removeClass('active');
+//     $(this).parent().toggleClass('active');
+//     let target = $(this).attr('href')
+//     $(target).toggleClass('active');
+//   })
+// })
+// $(function() {
+//   var tab = $('a[data-toggle="tab"]');
+//
+//   tab.on('click', function() {
+//     event.preventDefault();
+//     $('.active').removeClass('active');
+//     $(this).parent().toggleClass('active');
+//     var target = $(this).attr('href');
+//     $(target).toggleClass('active');
+//   });
+// });
+
+// /* Всё о всплывающих (модальных) окнах */
+// $(document).ready(function() {
+//   let modal = $('.popup'),
+//     overlay = $('.overlay'),
+//     link = $('button[data-popup = "true"]'),
+//     close = $('.close-btn'),
+//     fruitName = $('.fruit-name')
+//   link.on('click', function(){
+//     overlay.show()
+//     // modal.show()
+//     modal.toggleClass('popup_active')
+//     fruitName.text($(this).attr('data-fruit'))
+//     // console.log($(this).attr('data-fruit'))
+//   })
+//   close.click(function(){
+//     overlay.hide()
+//     // modal.hide()
+//     modal.toggleClass('popup_active')
+//   })
+// })
+/*$(document).ready(function() {
+ 	var modal = $('.popup'),
+ 					overlay = $('.overlay'),
+ 					link = $('button[data-popup="true"]'),
+ 					close = $('.close-btn');
+ 	link.on('click', function () {
+ 		overlay.show();
+ 		modal.show();
+ 	});
+ 	close.click(function() {
+ 		overlay.hide();
+ 		modal.hide();
+ 	});
+ });	*/ // Самый простой вариант всплывающего окна
+
+
+/*$(document).ready(function() {
+ 	var modal = $('.popup'),
+ 					overlay = $('.overlay'),
+ 					link = $('button[data-popup="true"]'),
+ 					close = $('.close-btn');
+
+ 	close.click(function() {
+ 		modal.toggleClass('popup_active');
+ 		overlay.hide();
+ 	});
+ 	link.on('click', function () {
+ 		console.log(modal);
+ 		overlay.show();
+ 		modal.toggleClass('popup_active');
+ 	});
+ });*/	// Красивое появляение окна
+
+
+// $(document).ready(function() {
+//   var modal = $('.popup'),
+//     overlay = $('.overlay'),
+//     link = $('button[data-popup="true"]'),
+//     close = $('.close-btn'),
+//     fruitName = $('.fruit-name');
+//
+//   close.click(function() {
+//     modal.toggleClass('popup_active');
+//     overlay.hide();
+//   });
+//   link.on('click', function () {
+//     fruitName.text($(this).attr('data-fruit'));
+//     overlay.show();
+//     modal.toggleClass('popup_active');
+//   });
+// });// Много кнопок - одно окно
+
+// Как всегда, проверим готовность документа
+// $(function() {
+//   // Отлавливаем события "Нажатие на клавишу"
+//   $(this).keydown(function(event) {
+//     // console.log(this)
+//     console.log(event.which)
+//     // Создаем переменную, в которую помещаем div с подходящим data-key
+//     // var key = $(this).find('.key[data-key='+event.which+']');
+//     let key = $(this).find('.key[data-key='+event.which+']');
+//     // Находим на странице тег audio с нужным data-key и помещаем также в переменную для удобства
+//     // var audio = $(this).find('audio[data-key='+event.which+']')[0];
+//     let audio = $(this).find('audio[data-key='+event.which+']')[0];
+//     // Присваиваем активный класс к клавише, чтобы подсветить ее
+//     // key.toggleClass('playing');
+//     key.toggleClass('playing');
+//     // проверяем существует ли audio тег с таким data-key
+//     // if (!audio) return;
+//     if(!audio) return;
+//     // Воспроизводим звук
+//     // audio.play();
+//     audio.play();
+//     // Сбрасываем таймер звуковой дорожки снова на 0
+//     // audio.currentTime = 0;
+//     audio.currentTime = 0;
+//   })
+// Отслеживаем событие, когда пользователь отпускает кнопку
+//   $(this).keyup(function(event) {
+//     // снова создаем переменную с нужным data-key
+//     var key = $(this).find('.key[data-key='+event.which+']');
+//     // Убираем класс, который подсвечивает кнопку
+//     key.toggleClass('playing');
+//   });
+// });
+
+/* ====== Базовые события ===== */
+
+// $('ul li').click(function(event) {
+// 	console.log('Ты нажал на элемент');
+// 	$('ul').append('<li>Дополнительный элемент</li>');
+// });	// click()
+// $('ul li').click(function(event){
+//   console.log(click)
+//   $('ul').append(el)
+// })
+// function addAndStop(e) {
+//   $('ul').append('<li>Дополнительный элемент</li>');
+//   $('ul').off('click');
+// }
+// function addAndStop(e){
+//   $('ul').append(el)
+//   $('ul').off('click')
+// }
+// $('ul').on('click', 'li', addAndStop);
+// $('ul').on('click', 'li', addAndStop)
 /* ====== События браузера и страницы ===== */
 
 // $(function() {
