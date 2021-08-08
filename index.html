@@ -11,12 +11,41 @@
     href="css/style.css">
 </head>
 <body>
-	<div class="container">
-	<h2>Урок 15</h2>
-		<h3>Делаем собственный слайдер на jQuery</h3>
-		<hr>
+<div class="container">
+	<div class="menu-link">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<section id="main">
+		<h2 class="text-center">Section 1</h2>
+	</section>
+	<section id="news">
+		<h2 class="text-center">Section 2</h2>
+	</section>
+	<section id="feedback">
+		<h2 class="text-center">Section 3</h2>
+	</section>
+	<section id="maps">
+		<h2 class="text-center">Section 4</h2>
+	</section>
+	<menu>
+		<a href="#close"
+      class="close-btn">&times;</a>
+		<ul>
+		  <li><a href="#main">Section 1</a></li>
+		  <li><a href="#news">Section 2</a></li>
+		  <li><a href="#feedback">Section 3</a></li>
+		  <li><a href="#maps">Section 4</a></li>
+		</ul>
+	</menu>
+</div>
+<!--	<div class="container">-->
+<!--	<h2>Урок 15</h2>-->
+<!--		<h3>Делаем собственный слайдер на jQuery</h3>-->
+<!--		<hr>-->
 
-		<div class="slider">
+<!--		<div class="slider">-->
 <!--			<div class="viewport">-->
 <!--			<ul class="sliderwrapper">-->
 <!--				<li class="slide">-->
@@ -37,266 +66,266 @@
 <!--				</li>-->
 <!--			</ul>-->
 <!--			</div>-->
-      				<div class="viewport">
-      						<ul class="sliderwprapper">
-      							<li class="slide"><img src="img/1.png" alt="Слайд 1"></li>
-      							<li class="slide slide-none"><img src="img/2.png" alt="Слайд 2"></li>
-      							<li class="slide slide-none"><img src="img/3.png" alt="Слайд 3"></li>
-      							<li class="slide slide-none"><img src="img/4.png" alt="Слайд 4"></li>
-      						</ul>
-      						<div class="btn btn-prev	btn-round btn-primary">&lt;</div>
-      						<div class="btn btn-next	btn-round btn-primary">&gt;</div>
-      
-      						<div class="btns">
-      							<div class="slide-nav active"></div>
-      							<div class="slide-nav"></div>
-      							<div class="slide-nav"></div>
-      							<div class="slide-nav"></div>
-      						</div>
-      				</div>
-		</div>
+<!--      				<div class="viewport">-->
+<!--      						<ul class="sliderwprapper">-->
+<!--      							<li class="slide"><img src="img/1.png" alt="Слайд 1"></li>-->
+<!--      							<li class="slide slide-none"><img src="img/2.png" alt="Слайд 2"></li>-->
+<!--      							<li class="slide slide-none"><img src="img/3.png" alt="Слайд 3"></li>-->
+<!--      							<li class="slide slide-none"><img src="img/4.png" alt="Слайд 4"></li>-->
+<!--      						</ul>-->
+<!--      						<div class="btn btn-prev	btn-round btn-primary">&lt;</div>-->
+<!--      						<div class="btn btn-next	btn-round btn-primary">&gt;</div>-->
+<!--      -->
+<!--      						<div class="btns">-->
+<!--      							<div class="slide-nav active"></div>-->
+<!--      							<div class="slide-nav"></div>-->
+<!--      							<div class="slide-nav"></div>-->
+<!--      							<div class="slide-nav"></div>-->
+<!--      						</div>-->
+<!--      				</div>-->
+<!--		</div>-->
 
 
-	</div>
-  <!--	<div class="container">-->
-  <!--		<div>-->
-  <!--		  &lt;!&ndash; Nav tabs &ndash;&gt;-->
-  <!--		  <ul class="nav nav-tabs">-->
-  <!--		    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>-->
-  <!--		    <li><a href="#profile" data-toggle="tab">Profile</a></li>-->
-  <!--		    <li><a href="#messages" data-toggle="tab">Messages</a></li>-->
-  <!--		  </ul>-->
-  <!--			&lt;!&ndash; Tab panes &ndash;&gt;-->
-  <!--		  <div class="tab-content">-->
-  <!--		    <div class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio nisi praesentium doloribus odio cum, ut ipsa eum sint repudiandae, explicabo necessitatibus, mollitia obcaecati. Earum quam autem illo voluptatem accusamus.</div>-->
-  <!--		    <div class="tab-pane" id="profile">-->
-  <!--		    	<div class="progress">-->
-  <!--		    		<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">-->
-  <!--		    		<span class="sr-only">30% Complete</span>-->
-  <!--		    		</div>-->
-  <!--		    	</div>-->
-  <!--		    	<div class="progress">-->
-  <!--		    		<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">-->
-  <!--		    		<span class="sr-only">60% Complete</span>-->
-  <!--		    		</div>-->
-  <!--		    	</div>-->
-  <!--		    	<div class="progress progress-line-primary">-->
-  <!--		    		<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">-->
-  <!--		    		<span class="sr-only">30% Complete</span>-->
-  <!--		    		</div>-->
-  <!--		    	</div>-->
-  <!--		    	<div class="progress progress-line-info">-->
-  <!--		    		<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">-->
-  <!--		    		<span class="sr-only">60% Complete</span>-->
-  <!--		    		</div>-->
-  <!--		    	</div>-->
-  <!--		    </div>-->
-  <!--		    <div class="tab-pane" id="messages">-->
-  <!--		    	<div class="col-sm-4">-->
-  <!--		    		<div class="form-group">-->
-  <!--   	    	<input type="text" value="" placeholder="Regular" class="form-control" />-->
-  <!--		    		</div>-->
-  <!--		    	</div>-->
-  <!--		    	<div class="col-sm-4">-->
-  <!--		    		<div class="form-group label-floating">-->
-  <!--		    			<label class="control-label">With Floating Label</label>-->
-  <!--		    			<input type="email" class="form-control">-->
-  <!--		    		</div>-->
-  <!--		    	</div>-->
-  <!--		    	<div class="col-sm-4">-->
-  <!--		    		<div class="form-group label-floating has-success">-->
-  <!--		    			<label class="control-label">Success input</label>-->
-  <!--		    			<input type="text" value="Success" class="form-control" />-->
-  <!--		    			<span class="form-control-feedback">-->
-  <!--		    				<i class="material-icons">done</i>-->
-  <!--		    			</span>-->
-  <!--		    		</div>-->
-  <!--		    	</div>-->
-  <!--		    </div>-->
-  <!--		  </div>-->
-  <!--		</div>-->
-  <!--	</div>-->
-  <!--<div class="container">-->
-  <!--	<div class="container text-center">-->
-  <!--		<button class="btn btn-primary" data-fruit='Яблоки' data-popup="true">Хочу яблоки</button>-->
-  <!--		<button class="btn btn-success" data-fruit='Абрикосы' data-popup="true">Хочу абрикосы</button>-->
-  <!--		<button class="btn btn-danger" data-fruit='Апельсины' data-popup="true">Хочу Апельсины</button>-->
-  <!--	</div>-->
-  
-  <!--	<div class="overlay"></div>-->
-  <!--	<div class="popup text-center">-->
-  <!--		<div class="close-btn">&times;</div>-->
-  <!--			<h4>Купите <span class="fruit-name">фрукт!</span></h4>-->
-  <!--			<form action="#">-->
-  <!--				<input type="text" class="form-control" placeholder="Ваше имя">-->
-  <!--				<input type="text" class="form-control" placeholder="Ваш телефон">-->
-  <!--				<button type="submit" class="btn btn-danger">Купить <span class="fruit-name">фрукт!</span></button>-->
-  <!--			</form>-->
-  <!--	</div>-->
-  <!--</div>-->
-  <!--<div class="container">-->
-  <!--	<div class="keys" tabindex="1">-->
-  <!--    <div data-key="65" class="key">-->
-  <!--      <kbd>A</kbd>-->
-  <!--      <span class="sound">clap</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="83" class="key">-->
-  <!--      <kbd>S</kbd>-->
-  <!--      <span class="sound">hihat</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="68" class="key">-->
-  <!--      <kbd>D</kbd>-->
-  <!--      <span class="sound">kick</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="70" class="key">-->
-  <!--      <kbd>F</kbd>-->
-  <!--      <span class="sound">openhat</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="71" class="key">-->
-  <!--      <kbd>G</kbd>-->
-  <!--      <span class="sound">boom</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="72" class="key">-->
-  <!--      <kbd>H</kbd>-->
-  <!--      <span class="sound">ride</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="74" class="key">-->
-  <!--      <kbd>J</kbd>-->
-  <!--      <span class="sound">snare</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="75" class="key">-->
-  <!--      <kbd>K</kbd>-->
-  <!--      <span class="sound">tom</span>-->
-  <!--    </div>-->
-  <!--    <div data-key="76" class="key">-->
-  <!--      <kbd>L</kbd>-->
-  <!--      <span class="sound">tink</span>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  
-  <!--  <audio data-key="65" src="sounds/clap.wav"></audio>-->
-  <!--  <audio data-key="83" src="sounds/hihat.wav"></audio>-->
-  <!--  <audio data-key="68" src="sounds/kick.wav"></audio>-->
-  <!--  <audio data-key="70" src="sounds/openhat.wav"></audio>-->
-  <!--  <audio data-key="71" src="sounds/boom.wav"></audio>-->
-  <!--  <audio data-key="72" src="sounds/ride.wav"></audio>-->
-  <!--  <audio data-key="74" src="sounds/snare.wav"></audio>-->
-  <!--  <audio data-key="75" src="sounds/tom.wav"></audio>-->
-  <!--  <audio data-key="76" src="sounds/tink.wav"></audio>-->
-  <!--</div>-->
-  <!--<div class="container">-->
-  <!--		<h1>Урок 10</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>Базовые события <small>как их использовать</small></h2>-->
-  <!--		<hr>-->
-  
-  <!--		<ul>-->
-  <!--			<li>Элемент 1</li>-->
-  <!--			<li>Элемент 2</li>-->
-  <!--			<li>Элемент 3</li>-->
-  <!--			<li>Элемент 4</li>-->
-  <!--			<li>Элемент 5</li>-->
-  <!--		</ul>-->
-  <!--</div>-->
-  <!--<div class="container">-->
-  <!--		<h1>Урок 9</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>События браузера и страницы</h2>-->
-  <!--		<hr>-->
-  
-  <!--		<p>Страница еще не готова!</p>-->
-  
-  <!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non at quisquam minima tempore natus omnis accusamus distinctio, maiores labore quasi, facere, facilis nobis sequi similique. Quam doloremque facilis ab dolor aspernatur optio asperiores unde delectus tempora blanditiis accusantium fugit pariatur cupiditate aut animi maiores nostrum reiciendis tempore reprehenderit et assumenda mollitia porro, ex. Consequatur debitis, rerum dolorem ipsum velit error fugiat eveniet asperiores placeat nostrum, odit unde ea reprehenderit, eligendi quibusdam blanditiis, at tempore aperiam magni minima culpa deleniti quo! Assumenda impedit natus corporis quaerat a magni earum voluptas officiis quasi repellat, saepe maiores, molestias. Sint deserunt tempore sed explicabo animi minus sapiente adipisci! Optio alias ducimus explicabo placeat, illo praesentium dignissimos vero eius similique consequuntur beatae libero nemo tenetur, ut odio corporis facilis, magnam modi accusantium maiores voluptatem! Sapiente odio saepe, blanditiis. Obcaecati quibusdam, rerum, deserunt, veniam et aliquam, deleniti ea sunt fugiat non perspiciatis corporis aut. Unde expedita optio maiores voluptates dolore, officia nostrum quibusdam assumenda nulla, necessitatibus incidunt, vero provident alias dolores consequuntur quidem asperiores ipsa quod voluptatem ipsum voluptas ducimus. Voluptates veritatis officiis necessitatibus ipsum iste! Deleniti quae nemo nihil, a sint in commodi, odit corporis architecto consectetur ab, dolorem tempora, unde accusantium laborum deserunt possimus adipisci odio dolor itaque illum. Magni quo consectetur, repellat, dicta sit quae deleniti illo, quisquam soluta commodi beatae praesentium consequuntur minus vitae maxime nihil laudantium culpa. Voluptas consectetur magnam quibusdam quaerat nulla commodi neque odio velit nisi saepe eligendi sunt autem illum, tempore, adipisci esse vel animi repudiandae aperiam voluptates qui laborum facere voluptatem! Commodi, natus, aliquid. Earum ratione vero saepe. Sint nam pariatur perspiciatis perferendis dolore odio suscipit nobis dicta nulla necessitatibus nihil ab, harum vero dignissimos adipisci, possimus sequi reiciendis earum. Impedit aperiam tenetur, minima atque, ut nisi repellendus necessitatibus odio architecto dolore aliquid distinctio quo quisquam, unde dolores sequi labore. Dolorum neque nostrum, quas quia, possimus hic perspiciatis veniam obcaecati, eaque vitae tempora quisquam, maxime aliquid voluptatum. Officiis eligendi minima illum, illo quaerat repellendus sed iusto maxime, obcaecati ab nobis aliquid alias. Vitae commodi recusandae officia aspernatur nemo in fugit sunt, ipsa velit illo nulla fuga animi mollitia magni dolores exercitationem omnis veniam reiciendis. Laboriosam autem harum quod tenetur iure similique magnam et ullam iste. Animi, nobis maiores? Modi quasi, deserunt, consequuntur aperiam adipisci, quaerat commodi ratione maxime odit ullam nobis iure eligendi aliquam nisi ex delectus suscipit unde et ea similique quis provident culpa! Nisi nihil voluptatibus tenetur cum, accusantium totam eius nulla! Consequuntur illo enim officia voluptatum maxime laudantium commodi, consequatur ut accusamus voluptas adipisci. Error amet obcaecati perferendis totam nam, rem inventore similique, ad quaerat doloribus veniam recusandae, eum. Iste similique, natus fugit harum, nisi expedita esse modi non voluptas ratione quas. Reiciendis, libero, deleniti. Nam porro ipsam, illum magni quis cupiditate, commodi? Necessitatibus ad, molestiae autem voluptates ratione eveniet tempore facere rem tempora commodi culpa minima ipsum iusto accusamus nesciunt. Exercitationem illum, autem at, iure officia blanditiis repudiandae tempore nulla illo ad reprehenderit neque quo sunt tempora debitis aperiam aspernatur ipsa dolore facere. Animi ipsa aut incidunt sed libero necessitatibus, tempora consectetur eaque amet reprehenderit dolores! Nihil numquam dicta suscipit labore, quis sapiente animi vel ut, veniam quam, reprehenderit, quod molestiae dolor aliquam optio commodi consectetur eius. Quas cum error eos similique accusamus aliquam amet, deleniti quo? Quae nemo, provident, non dolorem est atque voluptas ex hic, repellendus laborum libero recusandae earum. Delectus dolores nobis consequuntur rerum nihil officia voluptatum accusantium facilis exercitationem, sapiente reprehenderit, veritatis quis maiores quasi odio. Quod ab soluta dolore architecto ipsum necessitatibus ut dolorem earum, alias a laborum exercitationem nemo, rerum libero, repellat saepe iusto deserunt distinctio nihil mollitia maiores enim eligendi excepturi. Officia non, at animi mollitia repellendus recusandae fugiat error. Numquam tempora exercitationem tempore, facere voluptas laboriosam ab vel reiciendis quia tenetur neque recusandae vero ipsum aperiam beatae eveniet iure quae maxime debitis, aliquid nobis iusto quasi est ipsam a? Ut perferendis pariatur non nobis, voluptas, vero molestias, similique sequi totam vel quibusdam excepturi saepe! Dignissimos eos itaque minus temporibus, at, pariatur amet possimus laborum in nesciunt fugit corporis doloribus voluptatum obcaecati recusandae libero atque dolore. Praesentium, dignissimos. Dolores harum, quasi reiciendis eum. Quo rem tenetur repellat dignissimos deleniti omnis deserunt praesentium veritatis, cum, animi error sunt fuga quas dolorum accusamus consequatur suscipit commodi neque hic in aspernatur earum? Sed sequi culpa dicta, consequuntur maiores alias! Et quibusdam, ducimus quas omnis, libero natus amet provident pariatur eaque eveniet velit error sunt assumenda obcaecati. Aliquid quo similique, assumenda iste laudantium esse, ab repellat voluptas quis, mollitia dolor, in minima quia corporis fuga minus distinctio illo voluptatum cum ad ex nostrum labore libero. Veritatis deleniti, distinctio nulla, illum excepturi accusantium assumenda quas dicta ipsum illo dolor animi corporis culpa eum? Possimus iusto odit saepe iure non molestias, autem placeat? Consequuntur delectus, repellendus aut eius blanditiis culpa rerum quos nisi quam. Voluptates culpa in, totam. Similique nostrum vero tempora minima, doloremque atque pariatur tempore nihil in dignissimos, dolor quisquam ipsum obcaecati tenetur, explicabo. Atque nobis temporibus itaque deserunt, ipsum voluptas. Laborum eaque asperiores cumque accusantium, voluptatum praesentium expedita quibusdam excepturi placeat blanditiis quae sunt eos maiores officiis repellendus, sequi id eligendi libero nemo distinctio quod, quo animi corporis. Ex nulla sunt recusandae porro in a, facere, pariatur vero totam corrupti id, sapiente! Repellat accusantium fugit temporibus mollitia eos, libero velit sunt est, autem ab aliquam natus blanditiis quae perferendis tenetur veniam vitae cumque deserunt culpa atque minima excepturi. Modi veritatis, ducimus et ratione doloribus totam animi distinctio sapiente rem odio repellendus inventore labore. Dolorum nihil dolorem ducimus quia provident id. Modi iste temporibus saepe, non libero necessitatibus amet itaque earum quae blanditiis? Recusandae alias aut distinctio tempore deleniti sed non laborum perferendis, debitis ipsum sequi, porro necessitatibus odit eum soluta qui dignissimos earum incidunt ducimus rem cupiditate minima, doloremque voluptatem fuga. Nihil quasi ducimus neque fugit quas expedita non veritatis, deleniti inventore culpa sint beatae fugiat repudiandae officia quibusdam hic, qui. Natus eos sequi mollitia ab deserunt quo error repellendus inventore ducimus, numquam, incidunt placeat saepe. Quo, ut, nemo!</p>-->
-  <!--</div>-->
-  <!--<div class="container">-->
-  <!--		<h1>Урок 8</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>События клавиатуры</h2>-->
-  <!--		<hr>-->
-  <!--		-->
-  <!--		<p class="text-place"></p>-->
-  <!--		<input type="text" placeholder="Начните вводить текст" class="form-control">-->
-  <!--		<button class="btn btn-success">Я - кнопка!</button>-->
-  <!--</div>-->
-  <!--<div class="container">-->
-  <!--		<h1>Урок 7</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>Базовые события</h2>-->
-  <!--		<hr>-->
-  
-  <!--		<button class="btn btn-success">Я - кнопка!</button>-->
-  <!--		<p class="text-place"></p>-->
-  
-  <!--		<ul>-->
-  <!--			<li>Пункт 1</li>-->
-  <!--			<li>Пункт 2</li>-->
-  <!--			<li>Пункт 3</li>-->
-  <!--			<li>Пункт 4</li>-->
-  <!--			<li>Пункт 5</li>-->
-  <!--		</ul>-->
-  <!--</div>-->
-  <!--<div class="container">-->
-  <!--		<h1>Урок 6</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>Фильтры форм</h2>-->
-  <!--		<div class="main-form">-->
-  <!--			<div class="label-block"><label>Текстовое поле </label><input type="text" class="form-control"></div>-->
-  <!--			<div class="label-block"><label>Радио кнопки  </label><input name='radio' type="radio"><input name='radio' type="radio"></div>-->
-  <!--			<div class="label-block"><label>Чекбоксы  </label><input type="checkbox"></div>-->
-  <!--			<div class="label-block"><label>Поле для пароля</label><input type="password" class="form-control"></div>-->
-  <!--			<div class="label-block"><label>Поле для загрузки файла</label><input type="file" ></div>-->
-  <!--			<div class="label-block"><label>Кнопка сброса  </label><input type="reset" class="btn"></div>-->
-  <!--			<div class="label-block"><label>Поле-картинка</label><input type="image"></div>-->
-  <!--			<div class="label-block"><label>Недоступное поле для ввода</label><input disabled type="text" class="form-control"></div>-->
-  <!--			<div class="label-block"><label>Кнопка  </label><input type="button" class="btn" value='Просто кнопка'></div>-->
-  <!--			<div class="label-block"><label>Кнопка оптпавить  </label><input type="submit" class="btn btn-success" value="Отправить"></div>-->
-  
-  <!--		</div>-->
-  <!--	<div class="container">-->
-  <!--		<h1>Урок 5</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>Фильтры | <span>по содержимому</span></h2>-->
-  <!--		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae laborum quae provident quidem, explicabo minus vel placeat enim aliquid aut aperiam id saepe omnis facilis fuga illo incidunt nobis? Harum.</p>-->
-  <!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita doloremque nesciunt fugiat ullam rem nihil corporis iste repellendus, iure, temporibus nemo. Sit unde error consequatur rerum, mollitia excepturi sequi aliquam!</p>-->
-  <!--		<p class="blue-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Гор, большого, вершину переписывается сих она послушавшись, что дорогу необходимыми все, текстов повстречался рукописи моей подпоясал. Выйти осталось пояс запятых?</p>-->
-  <!--		<ul>-->
-  <!--			<li><a download href="text.doc">Ссылка на файл</a></li>-->
-  <!--			<li><a href="http://ya.ru">Ссылка на Yandex</a></li>-->
-  <!--			<li><a href="https://google.com">Ссылка на Google</a></li>-->
-  <!--			<li><a data-target="main" href="#">Ссылка с атрибутом data-target</a></li>-->
-  <!--		</ul>-->
-  <!--	</div>-->
-  
-  <!--	<p></p>-->
-  <!--</div>-->
-  <!--	<div class="container">-->
-  <!--		<h1>Урок 4</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>Фильтры</h2>-->
-  <!--		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae laborum quae provident quidem, explicabo minus vel placeat enim aliquid aut aperiam id saepe omnis facilis fuga illo incidunt nobis? Harum.</p>-->
-  <!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita doloremque nesciunt fugiat ullam rem nihil corporis iste repellendus, iure, temporibus nemo. Sit unde error consequatur rerum, mollitia excepturi sequi aliquam!</p>-->
-  <!--		<p class="blue-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Гор, большого, вершину переписывается сих она послушавшись, что дорогу необходимыми все, текстов повстречался рукописи моей подпоясал. Выйти осталось пояс запятых?</p>-->
-  <!--		<ul>-->
-  <!--			<li><a download href="text.doc">Ссылка на файл</a></li>-->
-  <!--			<li><a href="http://ya.ru">Ссылка на Yandex</a></li>-->
-  <!--			<li><a href="https://google.com">Ссылка на Google</a></li>-->
-  <!--			<li><a data-target="main" href="#">Ссылка с атрибутом data-target</a></li>-->
-  <!--		</ul>-->
-  <!--	</div>-->
-  <!--	<div class="container">-->
-  <!--		<h1>Урок 3</h1>-->
-  <!--		<hr>-->
-  <!--		<h2>Взаимодействия по <span>атрибутам</span></h2>-->
-  <!--		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae laborum quae provident quidem, explicabo minus vel placeat enim aliquid aut aperiam id saepe omnis facilis fuga illo incidunt nobis? Harum.</p>-->
-  <!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita doloremque nesciunt fugiat ullam rem nihil corporis iste repellendus, iure, temporibus nemo. Sit unde error consequatur rerum, mollitia excepturi sequi aliquam!</p>-->
-  <!--		<p class="blue-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Гор, большого, вершину переписывается сих она послушавшись, что дорогу необходимыми все, текстов повстречался рукописи моей подпоясал. Выйти осталось пояс запятых?</p>-->
-  <!--		<ul>-->
-  <!--			<li><a download href="text.doc">Ссылка на файл</a></li>-->
-  <!--			<li><a href="http://ya.ru">Ссылка на Yandex</a></li>-->
-  <!--			<li><a href="https://google.com">Ссылка на Google</a></li>-->
-  <!--			<li><a data-target="main" href="#">Ссылка с атрибутом data-target</a></li>-->
-  <!--		</ul>-->
-  <!--	</div>-->
+<!--	</div>-->
+<!--	<div class="container">-->
+<!--		<div>-->
+<!--		  &lt;!&ndash; Nav tabs &ndash;&gt;-->
+<!--		  <ul class="nav nav-tabs">-->
+<!--		    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>-->
+<!--		    <li><a href="#profile" data-toggle="tab">Profile</a></li>-->
+<!--		    <li><a href="#messages" data-toggle="tab">Messages</a></li>-->
+<!--		  </ul>-->
+<!--			&lt;!&ndash; Tab panes &ndash;&gt;-->
+<!--		  <div class="tab-content">-->
+<!--		    <div class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio nisi praesentium doloribus odio cum, ut ipsa eum sint repudiandae, explicabo necessitatibus, mollitia obcaecati. Earum quam autem illo voluptatem accusamus.</div>-->
+<!--		    <div class="tab-pane" id="profile">-->
+<!--		    	<div class="progress">-->
+<!--		    		<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">-->
+<!--		    		<span class="sr-only">30% Complete</span>-->
+<!--		    		</div>-->
+<!--		    	</div>-->
+<!--		    	<div class="progress">-->
+<!--		    		<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">-->
+<!--		    		<span class="sr-only">60% Complete</span>-->
+<!--		    		</div>-->
+<!--		    	</div>-->
+<!--		    	<div class="progress progress-line-primary">-->
+<!--		    		<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">-->
+<!--		    		<span class="sr-only">30% Complete</span>-->
+<!--		    		</div>-->
+<!--		    	</div>-->
+<!--		    	<div class="progress progress-line-info">-->
+<!--		    		<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">-->
+<!--		    		<span class="sr-only">60% Complete</span>-->
+<!--		    		</div>-->
+<!--		    	</div>-->
+<!--		    </div>-->
+<!--		    <div class="tab-pane" id="messages">-->
+<!--		    	<div class="col-sm-4">-->
+<!--		    		<div class="form-group">-->
+<!--   	    	<input type="text" value="" placeholder="Regular" class="form-control" />-->
+<!--		    		</div>-->
+<!--		    	</div>-->
+<!--		    	<div class="col-sm-4">-->
+<!--		    		<div class="form-group label-floating">-->
+<!--		    			<label class="control-label">With Floating Label</label>-->
+<!--		    			<input type="email" class="form-control">-->
+<!--		    		</div>-->
+<!--		    	</div>-->
+<!--		    	<div class="col-sm-4">-->
+<!--		    		<div class="form-group label-floating has-success">-->
+<!--		    			<label class="control-label">Success input</label>-->
+<!--		    			<input type="text" value="Success" class="form-control" />-->
+<!--		    			<span class="form-control-feedback">-->
+<!--		    				<i class="material-icons">done</i>-->
+<!--		    			</span>-->
+<!--		    		</div>-->
+<!--		    	</div>-->
+<!--		    </div>-->
+<!--		  </div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--<div class="container">-->
+<!--	<div class="container text-center">-->
+<!--		<button class="btn btn-primary" data-fruit='Яблоки' data-popup="true">Хочу яблоки</button>-->
+<!--		<button class="btn btn-success" data-fruit='Абрикосы' data-popup="true">Хочу абрикосы</button>-->
+<!--		<button class="btn btn-danger" data-fruit='Апельсины' data-popup="true">Хочу Апельсины</button>-->
+<!--	</div>-->
+
+<!--	<div class="overlay"></div>-->
+<!--	<div class="popup text-center">-->
+<!--		<div class="close-btn">&times;</div>-->
+<!--			<h4>Купите <span class="fruit-name">фрукт!</span></h4>-->
+<!--			<form action="#">-->
+<!--				<input type="text" class="form-control" placeholder="Ваше имя">-->
+<!--				<input type="text" class="form-control" placeholder="Ваш телефон">-->
+<!--				<button type="submit" class="btn btn-danger">Купить <span class="fruit-name">фрукт!</span></button>-->
+<!--			</form>-->
+<!--	</div>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--	<div class="keys" tabindex="1">-->
+<!--    <div data-key="65" class="key">-->
+<!--      <kbd>A</kbd>-->
+<!--      <span class="sound">clap</span>-->
+<!--    </div>-->
+<!--    <div data-key="83" class="key">-->
+<!--      <kbd>S</kbd>-->
+<!--      <span class="sound">hihat</span>-->
+<!--    </div>-->
+<!--    <div data-key="68" class="key">-->
+<!--      <kbd>D</kbd>-->
+<!--      <span class="sound">kick</span>-->
+<!--    </div>-->
+<!--    <div data-key="70" class="key">-->
+<!--      <kbd>F</kbd>-->
+<!--      <span class="sound">openhat</span>-->
+<!--    </div>-->
+<!--    <div data-key="71" class="key">-->
+<!--      <kbd>G</kbd>-->
+<!--      <span class="sound">boom</span>-->
+<!--    </div>-->
+<!--    <div data-key="72" class="key">-->
+<!--      <kbd>H</kbd>-->
+<!--      <span class="sound">ride</span>-->
+<!--    </div>-->
+<!--    <div data-key="74" class="key">-->
+<!--      <kbd>J</kbd>-->
+<!--      <span class="sound">snare</span>-->
+<!--    </div>-->
+<!--    <div data-key="75" class="key">-->
+<!--      <kbd>K</kbd>-->
+<!--      <span class="sound">tom</span>-->
+<!--    </div>-->
+<!--    <div data-key="76" class="key">-->
+<!--      <kbd>L</kbd>-->
+<!--      <span class="sound">tink</span>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <audio data-key="65" src="sounds/clap.wav"></audio>-->
+<!--  <audio data-key="83" src="sounds/hihat.wav"></audio>-->
+<!--  <audio data-key="68" src="sounds/kick.wav"></audio>-->
+<!--  <audio data-key="70" src="sounds/openhat.wav"></audio>-->
+<!--  <audio data-key="71" src="sounds/boom.wav"></audio>-->
+<!--  <audio data-key="72" src="sounds/ride.wav"></audio>-->
+<!--  <audio data-key="74" src="sounds/snare.wav"></audio>-->
+<!--  <audio data-key="75" src="sounds/tom.wav"></audio>-->
+<!--  <audio data-key="76" src="sounds/tink.wav"></audio>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--		<h1>Урок 10</h1>-->
+<!--		<hr>-->
+<!--		<h2>Базовые события <small>как их использовать</small></h2>-->
+<!--		<hr>-->
+
+<!--		<ul>-->
+<!--			<li>Элемент 1</li>-->
+<!--			<li>Элемент 2</li>-->
+<!--			<li>Элемент 3</li>-->
+<!--			<li>Элемент 4</li>-->
+<!--			<li>Элемент 5</li>-->
+<!--		</ul>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--		<h1>Урок 9</h1>-->
+<!--		<hr>-->
+<!--		<h2>События браузера и страницы</h2>-->
+<!--		<hr>-->
+
+<!--		<p>Страница еще не готова!</p>-->
+
+<!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non at quisquam minima tempore natus omnis accusamus distinctio, maiores labore quasi, facere, facilis nobis sequi similique. Quam doloremque facilis ab dolor aspernatur optio asperiores unde delectus tempora blanditiis accusantium fugit pariatur cupiditate aut animi maiores nostrum reiciendis tempore reprehenderit et assumenda mollitia porro, ex. Consequatur debitis, rerum dolorem ipsum velit error fugiat eveniet asperiores placeat nostrum, odit unde ea reprehenderit, eligendi quibusdam blanditiis, at tempore aperiam magni minima culpa deleniti quo! Assumenda impedit natus corporis quaerat a magni earum voluptas officiis quasi repellat, saepe maiores, molestias. Sint deserunt tempore sed explicabo animi minus sapiente adipisci! Optio alias ducimus explicabo placeat, illo praesentium dignissimos vero eius similique consequuntur beatae libero nemo tenetur, ut odio corporis facilis, magnam modi accusantium maiores voluptatem! Sapiente odio saepe, blanditiis. Obcaecati quibusdam, rerum, deserunt, veniam et aliquam, deleniti ea sunt fugiat non perspiciatis corporis aut. Unde expedita optio maiores voluptates dolore, officia nostrum quibusdam assumenda nulla, necessitatibus incidunt, vero provident alias dolores consequuntur quidem asperiores ipsa quod voluptatem ipsum voluptas ducimus. Voluptates veritatis officiis necessitatibus ipsum iste! Deleniti quae nemo nihil, a sint in commodi, odit corporis architecto consectetur ab, dolorem tempora, unde accusantium laborum deserunt possimus adipisci odio dolor itaque illum. Magni quo consectetur, repellat, dicta sit quae deleniti illo, quisquam soluta commodi beatae praesentium consequuntur minus vitae maxime nihil laudantium culpa. Voluptas consectetur magnam quibusdam quaerat nulla commodi neque odio velit nisi saepe eligendi sunt autem illum, tempore, adipisci esse vel animi repudiandae aperiam voluptates qui laborum facere voluptatem! Commodi, natus, aliquid. Earum ratione vero saepe. Sint nam pariatur perspiciatis perferendis dolore odio suscipit nobis dicta nulla necessitatibus nihil ab, harum vero dignissimos adipisci, possimus sequi reiciendis earum. Impedit aperiam tenetur, minima atque, ut nisi repellendus necessitatibus odio architecto dolore aliquid distinctio quo quisquam, unde dolores sequi labore. Dolorum neque nostrum, quas quia, possimus hic perspiciatis veniam obcaecati, eaque vitae tempora quisquam, maxime aliquid voluptatum. Officiis eligendi minima illum, illo quaerat repellendus sed iusto maxime, obcaecati ab nobis aliquid alias. Vitae commodi recusandae officia aspernatur nemo in fugit sunt, ipsa velit illo nulla fuga animi mollitia magni dolores exercitationem omnis veniam reiciendis. Laboriosam autem harum quod tenetur iure similique magnam et ullam iste. Animi, nobis maiores? Modi quasi, deserunt, consequuntur aperiam adipisci, quaerat commodi ratione maxime odit ullam nobis iure eligendi aliquam nisi ex delectus suscipit unde et ea similique quis provident culpa! Nisi nihil voluptatibus tenetur cum, accusantium totam eius nulla! Consequuntur illo enim officia voluptatum maxime laudantium commodi, consequatur ut accusamus voluptas adipisci. Error amet obcaecati perferendis totam nam, rem inventore similique, ad quaerat doloribus veniam recusandae, eum. Iste similique, natus fugit harum, nisi expedita esse modi non voluptas ratione quas. Reiciendis, libero, deleniti. Nam porro ipsam, illum magni quis cupiditate, commodi? Necessitatibus ad, molestiae autem voluptates ratione eveniet tempore facere rem tempora commodi culpa minima ipsum iusto accusamus nesciunt. Exercitationem illum, autem at, iure officia blanditiis repudiandae tempore nulla illo ad reprehenderit neque quo sunt tempora debitis aperiam aspernatur ipsa dolore facere. Animi ipsa aut incidunt sed libero necessitatibus, tempora consectetur eaque amet reprehenderit dolores! Nihil numquam dicta suscipit labore, quis sapiente animi vel ut, veniam quam, reprehenderit, quod molestiae dolor aliquam optio commodi consectetur eius. Quas cum error eos similique accusamus aliquam amet, deleniti quo? Quae nemo, provident, non dolorem est atque voluptas ex hic, repellendus laborum libero recusandae earum. Delectus dolores nobis consequuntur rerum nihil officia voluptatum accusantium facilis exercitationem, sapiente reprehenderit, veritatis quis maiores quasi odio. Quod ab soluta dolore architecto ipsum necessitatibus ut dolorem earum, alias a laborum exercitationem nemo, rerum libero, repellat saepe iusto deserunt distinctio nihil mollitia maiores enim eligendi excepturi. Officia non, at animi mollitia repellendus recusandae fugiat error. Numquam tempora exercitationem tempore, facere voluptas laboriosam ab vel reiciendis quia tenetur neque recusandae vero ipsum aperiam beatae eveniet iure quae maxime debitis, aliquid nobis iusto quasi est ipsam a? Ut perferendis pariatur non nobis, voluptas, vero molestias, similique sequi totam vel quibusdam excepturi saepe! Dignissimos eos itaque minus temporibus, at, pariatur amet possimus laborum in nesciunt fugit corporis doloribus voluptatum obcaecati recusandae libero atque dolore. Praesentium, dignissimos. Dolores harum, quasi reiciendis eum. Quo rem tenetur repellat dignissimos deleniti omnis deserunt praesentium veritatis, cum, animi error sunt fuga quas dolorum accusamus consequatur suscipit commodi neque hic in aspernatur earum? Sed sequi culpa dicta, consequuntur maiores alias! Et quibusdam, ducimus quas omnis, libero natus amet provident pariatur eaque eveniet velit error sunt assumenda obcaecati. Aliquid quo similique, assumenda iste laudantium esse, ab repellat voluptas quis, mollitia dolor, in minima quia corporis fuga minus distinctio illo voluptatum cum ad ex nostrum labore libero. Veritatis deleniti, distinctio nulla, illum excepturi accusantium assumenda quas dicta ipsum illo dolor animi corporis culpa eum? Possimus iusto odit saepe iure non molestias, autem placeat? Consequuntur delectus, repellendus aut eius blanditiis culpa rerum quos nisi quam. Voluptates culpa in, totam. Similique nostrum vero tempora minima, doloremque atque pariatur tempore nihil in dignissimos, dolor quisquam ipsum obcaecati tenetur, explicabo. Atque nobis temporibus itaque deserunt, ipsum voluptas. Laborum eaque asperiores cumque accusantium, voluptatum praesentium expedita quibusdam excepturi placeat blanditiis quae sunt eos maiores officiis repellendus, sequi id eligendi libero nemo distinctio quod, quo animi corporis. Ex nulla sunt recusandae porro in a, facere, pariatur vero totam corrupti id, sapiente! Repellat accusantium fugit temporibus mollitia eos, libero velit sunt est, autem ab aliquam natus blanditiis quae perferendis tenetur veniam vitae cumque deserunt culpa atque minima excepturi. Modi veritatis, ducimus et ratione doloribus totam animi distinctio sapiente rem odio repellendus inventore labore. Dolorum nihil dolorem ducimus quia provident id. Modi iste temporibus saepe, non libero necessitatibus amet itaque earum quae blanditiis? Recusandae alias aut distinctio tempore deleniti sed non laborum perferendis, debitis ipsum sequi, porro necessitatibus odit eum soluta qui dignissimos earum incidunt ducimus rem cupiditate minima, doloremque voluptatem fuga. Nihil quasi ducimus neque fugit quas expedita non veritatis, deleniti inventore culpa sint beatae fugiat repudiandae officia quibusdam hic, qui. Natus eos sequi mollitia ab deserunt quo error repellendus inventore ducimus, numquam, incidunt placeat saepe. Quo, ut, nemo!</p>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--		<h1>Урок 8</h1>-->
+<!--		<hr>-->
+<!--		<h2>События клавиатуры</h2>-->
+<!--		<hr>-->
+<!--		-->
+<!--		<p class="text-place"></p>-->
+<!--		<input type="text" placeholder="Начните вводить текст" class="form-control">-->
+<!--		<button class="btn btn-success">Я - кнопка!</button>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--		<h1>Урок 7</h1>-->
+<!--		<hr>-->
+<!--		<h2>Базовые события</h2>-->
+<!--		<hr>-->
+
+<!--		<button class="btn btn-success">Я - кнопка!</button>-->
+<!--		<p class="text-place"></p>-->
+
+<!--		<ul>-->
+<!--			<li>Пункт 1</li>-->
+<!--			<li>Пункт 2</li>-->
+<!--			<li>Пункт 3</li>-->
+<!--			<li>Пункт 4</li>-->
+<!--			<li>Пункт 5</li>-->
+<!--		</ul>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--		<h1>Урок 6</h1>-->
+<!--		<hr>-->
+<!--		<h2>Фильтры форм</h2>-->
+<!--		<div class="main-form">-->
+<!--			<div class="label-block"><label>Текстовое поле </label><input type="text" class="form-control"></div>-->
+<!--			<div class="label-block"><label>Радио кнопки  </label><input name='radio' type="radio"><input name='radio' type="radio"></div>-->
+<!--			<div class="label-block"><label>Чекбоксы  </label><input type="checkbox"></div>-->
+<!--			<div class="label-block"><label>Поле для пароля</label><input type="password" class="form-control"></div>-->
+<!--			<div class="label-block"><label>Поле для загрузки файла</label><input type="file" ></div>-->
+<!--			<div class="label-block"><label>Кнопка сброса  </label><input type="reset" class="btn"></div>-->
+<!--			<div class="label-block"><label>Поле-картинка</label><input type="image"></div>-->
+<!--			<div class="label-block"><label>Недоступное поле для ввода</label><input disabled type="text" class="form-control"></div>-->
+<!--			<div class="label-block"><label>Кнопка  </label><input type="button" class="btn" value='Просто кнопка'></div>-->
+<!--			<div class="label-block"><label>Кнопка оптпавить  </label><input type="submit" class="btn btn-success" value="Отправить"></div>-->
+
+<!--		</div>-->
+<!--	<div class="container">-->
+<!--		<h1>Урок 5</h1>-->
+<!--		<hr>-->
+<!--		<h2>Фильтры | <span>по содержимому</span></h2>-->
+<!--		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae laborum quae provident quidem, explicabo minus vel placeat enim aliquid aut aperiam id saepe omnis facilis fuga illo incidunt nobis? Harum.</p>-->
+<!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita doloremque nesciunt fugiat ullam rem nihil corporis iste repellendus, iure, temporibus nemo. Sit unde error consequatur rerum, mollitia excepturi sequi aliquam!</p>-->
+<!--		<p class="blue-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Гор, большого, вершину переписывается сих она послушавшись, что дорогу необходимыми все, текстов повстречался рукописи моей подпоясал. Выйти осталось пояс запятых?</p>-->
+<!--		<ul>-->
+<!--			<li><a download href="text.doc">Ссылка на файл</a></li>-->
+<!--			<li><a href="http://ya.ru">Ссылка на Yandex</a></li>-->
+<!--			<li><a href="https://google.com">Ссылка на Google</a></li>-->
+<!--			<li><a data-target="main" href="#">Ссылка с атрибутом data-target</a></li>-->
+<!--		</ul>-->
+<!--	</div>-->
+
+<!--	<p></p>-->
+<!--</div>-->
+<!--	<div class="container">-->
+<!--		<h1>Урок 4</h1>-->
+<!--		<hr>-->
+<!--		<h2>Фильтры</h2>-->
+<!--		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae laborum quae provident quidem, explicabo minus vel placeat enim aliquid aut aperiam id saepe omnis facilis fuga illo incidunt nobis? Harum.</p>-->
+<!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita doloremque nesciunt fugiat ullam rem nihil corporis iste repellendus, iure, temporibus nemo. Sit unde error consequatur rerum, mollitia excepturi sequi aliquam!</p>-->
+<!--		<p class="blue-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Гор, большого, вершину переписывается сих она послушавшись, что дорогу необходимыми все, текстов повстречался рукописи моей подпоясал. Выйти осталось пояс запятых?</p>-->
+<!--		<ul>-->
+<!--			<li><a download href="text.doc">Ссылка на файл</a></li>-->
+<!--			<li><a href="http://ya.ru">Ссылка на Yandex</a></li>-->
+<!--			<li><a href="https://google.com">Ссылка на Google</a></li>-->
+<!--			<li><a data-target="main" href="#">Ссылка с атрибутом data-target</a></li>-->
+<!--		</ul>-->
+<!--	</div>-->
+<!--	<div class="container">-->
+<!--		<h1>Урок 3</h1>-->
+<!--		<hr>-->
+<!--		<h2>Взаимодействия по <span>атрибутам</span></h2>-->
+<!--		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae laborum quae provident quidem, explicabo minus vel placeat enim aliquid aut aperiam id saepe omnis facilis fuga illo incidunt nobis? Harum.</p>-->
+<!--		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita doloremque nesciunt fugiat ullam rem nihil corporis iste repellendus, iure, temporibus nemo. Sit unde error consequatur rerum, mollitia excepturi sequi aliquam!</p>-->
+<!--		<p class="blue-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Гор, большого, вершину переписывается сих она послушавшись, что дорогу необходимыми все, текстов повстречался рукописи моей подпоясал. Выйти осталось пояс запятых?</p>-->
+<!--		<ul>-->
+<!--			<li><a download href="text.doc">Ссылка на файл</a></li>-->
+<!--			<li><a href="http://ya.ru">Ссылка на Yandex</a></li>-->
+<!--			<li><a href="https://google.com">Ссылка на Google</a></li>-->
+<!--			<li><a data-target="main" href="#">Ссылка с атрибутом data-target</a></li>-->
+<!--		</ul>-->
+<!--	</div>-->
 
 	
 	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
