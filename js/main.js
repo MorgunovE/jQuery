@@ -1,28 +1,107 @@
-const border = { 'border': '1px solid red' }
-const block = { 'display': 'block' }
+const border = {'border': '1px solid red'}
+const block = {'display': 'block'}
 const click = 'Ты кликнул на кнопку'
 const el = '<li>Дополнительный элемент</li>'
 
-$( function() {
-  let menuLink = $( '.menu-link' )
-  let menu = $( 'menu' )
-  let close = $( '.close-btn' )
-  let navLink = $( 'li a' )
-  menuLink.click( function() {
-    menu.toggleClass( 'active-menu' )
-  } )
-  close.click( function() {
-    menu.toggleClass( 'active-menu' )
-  } )
-  navLink.on( 'click', function( event ) {
-    event.preventDefault();
-    let target = $( this ).attr( 'href' )
-    // console.log( target )
-    let top = $( target ).offset().top;
-    // console.log( top )
-    $( 'html,body' ).animate( { scrollTop: top }, 500 )
-  } )
-} )
+$(function() {
+  $('.input-cart-number').numeric()
+  $('#card-ccv').numeric()
+  $('.input-cart-number').on('keyup change', function() {
+    $('.number span:nth-child(' + $(this).index() + ')').text($(this).val())
+    if($(this).val().length > 3) {
+      $(this).next().focus();
+    }
+    if($(this).val().length < 1) {
+      $(this).prev().focus()
+    }
+    if($(this).val().length > 3 && $(this).index() == 4) {
+      $('#card-holder').focus();
+    }
+  })
+  $('#card-holder').on('keyup change', function() {
+    $('.card-holder div').text($(this).val())
+  })
+  $('#card-expiration-month').change(function() {
+    $('.month').text($(this).val() + '/')
+  })
+  $('#card-expiration-year').change(function() {
+    $('.year').text($(this).val())
+  })
+  $('#card-ccv').on('focus', function() {
+    $('.credit-card-box').addClass('hover')
+  }).on('blur', function() {
+    $('.credit-card-box').removeClass('hover')
+  }).on('keyup change', function() {
+    $('.ccv').text($(this).val())
+  })
+})
+
+// $( function() {
+//   let mCount = $( '.m-count' ),
+//     floorNumber = $( '.floor-number' ),
+//     typeOfHouse = $( 'input[name="typeOfHouse"]' ).val(),
+//     project = $( 'input[type="checkbox"]' ),
+//     price = $( '#price' ),
+//     finalPrice = 900000,
+//     basePrice = 30000,
+//     design = 0
+//  function countFinalPrice(){
+//     finalPrice = ( +mCount.val() * basePrice ) * +floorNumber.val() * +typeOfHouse + design
+//     price.text( finalPrice )
+//   }
+//   mCount.change( function() {
+//     if( $( this ).val() > 20 ) {
+//       $( this ).tooltip( 'destroy' )
+//       countFinalPrice()
+//     } else {
+//       $( this ).tooltip( 'toggle' )
+//     }
+//   } )
+//   floorNumber.change( function() {
+//     countFinalPrice()
+//   } )
+//   $( 'input[name="typeOfHouse"]' ).change( function() {
+//     typeOfHouse = $( this ).val()
+//     countFinalPrice()
+//     if( $( this ).val() == 1 ) {
+//       $( 'img' ).attr( 'src', 'img/1.jpg' )
+//     } else {
+//       $( 'img' ).attr( 'src', 'img/2.png' )
+//     }
+//   } )
+//   project.change( function() {
+//     if( $( this ).is( ':checked' ) ) {
+//       design = 15000
+//       countFinalPrice()
+//     } else {
+//       design = 0
+//       countFinalPrice()
+//     }
+//
+//   } )
+//   price.text( finalPrice )
+// } )
+
+// $( function() {
+//   let menuLink = $( '.menu-link' )
+//   let menu = $( 'menu' )
+//   let close = $( '.close-btn' )
+//   let navLink = $( 'li a' )
+//   menuLink.click( function() {
+//     menu.toggleClass( 'active-menu' )
+//   } )
+//   close.click( function() {
+//     menu.toggleClass( 'active-menu' )
+//   } )
+//   navLink.on( 'click', function( event ) {
+//     event.preventDefault();
+//     let target = $( this ).attr( 'href' )
+//     // console.log( target )
+//     let top = $( target ).offset().top;
+//     // console.log( top )
+//     $( 'html,body' ).animate( { scrollTop: top }, 500 )
+//   } )
+// } )
 /* Делаем собственный слайдер на jQuery */
 // $( function() {
 //   let slideNow = 1;
