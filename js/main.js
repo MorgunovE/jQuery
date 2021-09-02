@@ -11,7 +11,6 @@ $(function() {
     }
   })
 })
-
 // $(function() {
 //   $('.input-cart-number').numeric()
 //   $('#card-ccv').numeric()
