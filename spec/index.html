@@ -2,12 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    div#show {
+      display: block;
+      margin-top: 1em;
+    }
+    
+    div#show button {
+      padding: 1em;
+      margin-right: 1em;
+      cursor: pointer;
+    }
+    
+    body {
+      width: 400px;
+      margin: 100px auto 0
+    }
+    
+    div.view {
+      height: 200px;
+      overflow: hidden
+    }
+    
+    div.view ul {
+      list-style: none;
+      width: 10000px;
+    }
+    
+    div.view li {
+      float: left
+    }
+  </style>
   <title>Document</title>
 </head>
 <body>
+<div class="view">
+  <ul>
+    <li><img alt="" src="img/red.gif"></li>
+    <li><img alt="" src="img/green.gif"></li>
+    <li><img alt="" src="img/blue.gif"></li>
+    <li><img alt="" src="img/yellow.gif"></li>
+  </ul>
+</div>
+<div id="show">
+  <button id="prev" data-param = 'prev'>Prev</button>
+  <button id="next" data-param = 'next'>Next</button>
+</div>
 <script src="jquery-3.6.0.min.js"></script>
 <script src="main.js"></script>
 </body>

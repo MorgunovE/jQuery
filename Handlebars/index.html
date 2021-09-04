@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <script src="handlebars.min-v4.7.7.js"></script>
+  <title>Handlebars template</title>
+</head>
+<body>
+<ul id="users">
+  <script id="myTpl" type="text/x-handlebars-template">
+    {{#each this}}
+      <li><h3>{{name}}</h3>
+        <p>Email: {{email}}</p></li>
+    {{/each}}
+  </script>
+</ul>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
