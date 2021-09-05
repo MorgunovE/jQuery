@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<label for="textFile">Text</label>
+<br />
+<input type='file' id="textFile" onchange="readTextFile()">
+<br />
+<div id="result"></div>
+
+<br />
+<label for="imageFile">Img</label>
+<br />
+<input type='file' id="imageFile" onchange="readImageFile()">
+<br />
+<img id="myImage" alt="" src="">
+<div id="resultProgress"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
